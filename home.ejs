@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            list-style: none;
+            scroll-behavior: smooth;
+        }
+        body{
+            background: rgb(0, 0, 0);
+            font-family: fantasy;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        header{
+            position: fixed;
+            width: 100%;
+            top: 0;
+            right: 0;
+            z-index: 1000px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 35px 13% ;
+            padding-right: 3%;
+            border-bottom: 2px solid black;
+            border-top: 2px solid black;
+            transition: all .45s ease;
+            background-color: rgb(27, 34, 34);
+        }
+        .logo{
+            color: rgb(255, 255, 255);
+            font-size: 35px;
+            font-weight: 500;
+            letter-spacing: 1.5px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        .logo span{
+            color: rgb(121, 59, 53);
+        }
+        .hlist{
+            display: flex;
+            font-size: 35px;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        .hlist a{
+            color: rgb(255, 255, 255);
+            font-size: 17px;
+            font-weight: 500;
+            margin: 0 30px;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: all .45s ease;
+            box-shadow: 3px 3px 10px 5px #494444;
+        }
+        .hlist a:hover{
+            color: rgb(106, 101, 101);
+        }
+        .hlist li a:hover{
+            background: #fff;
+            color: black;
+        
+        }
+        .home{
+            color: #ffffff;
+            padding: 15% 15% 5% 15%;
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .home h1{
+            padding-left: 18%;
+            font-size: 45px;
+        }
+        .home h2{
+            padding-left: 30%;
+            font-size: 38px;
+        }
+        .home h3{
+            font-size: 27px;
+        }
+        .home p{
+            padding-bottom: 2%;
+        } 
+        .menu{
+            display: flex;
+            font-size: 35px;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            background-color: #393939;
+            padding-top: 2%;
+            padding-bottom: 2%;
+            box-shadow: 3px 3px 10px 5px #000;
+        }
+        .menu a{
+            color: rgb(255, 255, 255);
+            font-size: 17px;
+            font-weight: 500;
+            margin: 0 30px;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: all .3s ease;
+        }
+        .menu a:hover{
+            color: rgb(106, 101, 101);
+        }
+        .menu li a:hover{
+            background: #fff;
+            color: black;
+        }
+        /* css */
+        h1{
+            color: #000000;
+            font-size: 40px;
+        }
+        table{
+            width: 40%;
+            margin-top: 40px;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            margin-left: 450px;
+        }
+        table th{
+            padding-left: 10px;
+            padding-right: 10px;
+            margin-left: 10px;
+            margin-right: 10px;
+            text-align: center;
+            background: black;
+            border: 2px solid rgb(255, 255, 255);
+            color: rgb(255, 255, 255);
+        }
+        table td{
+            background-color: rgba(0, 0, 0, 0.682);
+            text-align: center;
+            border: 2px solid rgb(255, 255, 255);
+            color: rgb(255, 255, 255);
+        }
+        .textx h1{
+            text-align: center;
+            align-items: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        .textx h2{
+            color: #ffffff;
+            font-size: 25px;
+            padding-left: 300px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        .textx p{
+            color: #ffffff;
+            font-size: 17.5px;
+            padding-left: 300px;
+            padding-right: 300px;
+        }
+        .textx ul{
+            color: #ffffff;
+            font-size: 17px;
+            padding-left: 300px;
+            padding-right: 300px;
+        }
+    </style>
+</head>
+<body>
+    <form action="/home.ejs" method="post">
+    <!-----------------------------logo----------------------------->
+    <nav>
+        <header>
+            <div class="logo">
+                <a class="logo"><span>MYTH</span>OLOGY</a>
+            </div>
+            <ul class="hlist">
+                <li><a class="one" href="home.ejs">HOME</a></li>
+                <li><a class="one" href="cat.ejs">CATEGORIES</a></li>
+                <li><a class="one" href="trees.ejs">GEN-Z TREES</a></li>
+                <li><a class="one" href="us.ejs">ABOUT US</a></li>
+            </ul>
+            <div class="bx-menu" id="menu-icon"> </div>
+        </header>
+    </nav>
+    <!---------------------------home--------------------------->
+    <div>
+        <section class="home" id="home">
+            <div class="home-text">
+                <div class="text">
+                    <h3>PROLOGUE</h1><br>
+                    <P>There are over a hundred different world mythologies that
+                       we know of today. Among these are the Greek, Roman, Norse,
+                       Etruscan, Celtic, Slavic, Egyptian, Mesopotamian, Babylonian,
+                       Arabian, Islamic, Hindu, Buddhist, Chinese, and many more myths.</P>
+
+                       <p> Greek Mythology is a reflection of past civilization the myths
+                        deal with the creation of the gods and the world, the struggle
+                        among the gods for supermacy and the triump of "Zeus".The effects 
+                        of their adventures and powers on the mortal world, including their
+                        link with natural phenomena such as thunder stroms or the seasons. 
+                        Myth a story of the gods,a religious account of the begginning of 
+                        the world, the creation,the examplary deeds of the gods as a result
+                        of which the world,nature, and culture were created together with all
+                        parts there of and given their order which still obtains.</p>
+
+                        <p>Greek mythology refers to a collection of legends & myths as used 
+                        by the ancient Greeks in reference to their heroes and gods it is 
+                        also take to mean the nature to the world, as well as the genesis and
+                        importance of the greeks rituals and cult practices greek mythology 
+                        is a group of epic stories about, gods, goddess, heroes, creatures and 
+                        the rituals of ancient greece most of these stories were told by the ancient 
+                        greeks to their families. and friends over many generations.</p>
+
+                        <p>Greek myths explained everything from religious rituals to the weather,
+                        and gave meaning to the world that people saw around them. While many of these 
+                        myths are fanciful tales, such as the legends of greek king midas or heroic 
+                        hercules & mythology provides us with crucial insights into historical events,
+                        ancient cultures, relationships heman alliances and much nore ancient greek
+                        used myths about gods to help them underst and things happenings around them 
+                        such as the forces & nature Reading greek myths helps students lean more about 
+                        ancient greek and roman culture,reference to greek mythology. Can still be 
+                        bound in our discussions about science, arts literature language, names and brands. 
+                        Thinkers fron ancient greece also laid the foundations for many areas of study 
+                        including astrology, mathematics, biology, engineering, medicine of linguistic.</p>
+                </div>
+                <div class="menu">
+                    <header1>
+                        <div class="menu-text">
+                            <li><a href="#gen" class="two">GENERATIONS</a></li>
+                            <li><a href="#god" class="two">GODS</a></li>
+                            <li><a href="#evil" class="two">EVIL</a></li>
+                            <li><a href="#creatures" class="two">CREATURES</a></li>
+                            <li><a href="#planets" class="two">PLANETS</a></li>
+                            <li><a href="#plants" class="two">PLANTS</a></li>
+                        </div>
+                    </header1>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-------------------------------generation--------------------------------->
+    <section class="gen" id="gen">
+        <div class="textx">
+            <h1 style="text-align: center; background-color: rgb(152, 152, 152);">Generations of Greek Mythology</h1>
+            <table style="align-items: center; color: rgb(253, 253, 253);">
+                <tr>
+                    <th>Generations</th>
+                    <th>Members</th>
+                </tr>
+                <tr>
+                    <th>1<sup>st</sup></th>
+                    <td>CHAOS/EROS/GAIA</td>
+                </tr>
+                <tr>
+                    <th>2<sup>nd</sup></th>
+                    <td>TITANS</td>
+                </tr>
+                <tr>
+                    <th>3<sup>rd</sup></th>
+                    <td>OLDER OLYMPIANS</td>
+                </tr>
+                <tr>
+                    <th>4<sup>th</sup></th>
+                    <td>YOUNGER OLYMPIANS</td>
+                </tr>
+            </table>
+            <h2>The Begginning</h2>
+            <p>According to ancient Greek creation store, Chaos was the beginning of everything. 
+                Some stories explain Chaos as a void of nothingness. Others highlight the fact 
+                that Chaos was the first Greek deity. He existed alone before Gaia appeared. 
+                While Chaos was the void, Gaia was Mother Earth. In the stories where Gaia was 
+                the first deity, she gave birth to Uranus without having had a partner. Gaia and 
+                Uranus became husband and wife and parented the Titan Gods and Goddesses. Gaia 
+                and Uranus were also the parents of Cyclops and a fifty-headed monster.
+            </p>
+            <h2>The Titans</h2>
+            <p>There were twelve Titans total "six female and six male". They paired off to form six married couples. 
+                The Titans were Oceanus, Tethys, Hyperion, Theia, Crius, Mnemosyne, Coeus, Phoepe, Cronus, and Rhea. 
+                Cronus and Rhea were the parents of several of the Olympians. Cronus was told that his children would 
+                overthrow him. Rather than take any chances, he ate them. Rhea tricked Cronus in order to spare Zeus. 
+                When Zeus was grown, he freed his siblings and overthrew his father, thus making him the new King of 
+                the Gods. Some of the Titans, such as Rhea, were still mentioned in stories that featured the Olympians.
+            </p>
+            <h2>The Olympians</h2>
+            <p>After the Titan Wars, the Olympian gods and goddesses took over. They moved to the top of Mount 
+                Olympus where they were able to rule and oversee the mortals in their daily lives. The twelve Olympians 
+                were Zeus, Hera, Poseidon, Demeter, Athena, Apollo, Artemis, Ares, Aphrodite, Hephaestus, Hermes, Hestia, and Dionysius. 
+                Zeus, Hera, Poseidon, Demeter, and Hestia were all children of Cronus and Rhea. Thus, the prophecy came true. 
+                Note that Hades was also the brother of Poseidon and Zeus but he wasn't one of the Olympians. 
+                He became King of the Underworld.</p>
+                <h2 style="padding-left: 550px; color: white;">The Generations of Greek mythology:</h2>  
+            <img src="https://family-tree-template.org/wp-content/uploads/2016/01/greek-primordial-deities-family-tree.jpg" alt="Greek Mythology Image" style="width: 100%; max-width: 800px; display: block; margin: 0 auto;">       
+        </div>
+    </section>
+    <!-----------------------------------gods------------------------------------>
+    <section class="god" id="god">
+        <div class="textx">
+            <h1 style="text-align: center; background-color: rgb(152, 152, 152);  ">Gods of greek Mythology:</h1>
+            <p>It is difficult to know when Greek mythology started, as it is believed to have stemmed from 
+                centuries of oral tradition. It is likely that Greek myths evolved from stories told in the 
+                Minoan civilization of Crete, which flourished from about 3000 to 1100 BCE.</p>
+        <img src="https://www.thoughtco.com/thmb/LZFXzYlxd0pivxUbibMOWAjCUGA=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/98953030-56aac7995f9b58b7d008f52d.jpg" alt="Greek Mythology Image" style="width: 100%; max-width: 300px; margin-left: 300px; margin-top: 10px; margin-bottom: 5px;">
+        <img src="https://i.pinimg.com/originals/a2/6c/d4/a26cd4a2449ce85f3e68cd9a5f006be9.jpg" alt="Greek Mythology Image" style="width: 100%; max-width: 309px; margin-left: 10px; margin-bottom: 5px;">       
+        <img src="https://cdn.thecollector.com/wp-content/uploads/2022/02/apollo-greek-mythology-sculpture-vatican.jpg?width=1200&quality=55" alt="Greek Mythology Image" style="width: 100%; max-width: 278px; margin-left: 10px; margin-bottom: 5px;">
+            <p>Myths of origin
+                Myths of origin represent an attempt to render the universe comprehensible in human terms. 
+                Greek creation myths (cosmogonies) and views of the universe (cosmologies) were more systematic 
+                and specific than those of other ancient peoples. Yet their very artistry serves as an impediment 
+                to interpretation, since the Greeks embellished the myths with folktale and fiction told for its 
+                own sake. Thus, though the aim of Hesiod's Theogony is to describe the ascendancy of Zeus 
+                (and, incidentally, the rise of the other gods), the inclusion of such familiar themes as 
+                the hostility between the generations, the enigma of woman (Pandora), the exploits of the 
+                friendly trickster (Prometheus), and the struggles against powerful beings or monsters like 
+                the Titans (and, in later tradition, the Giants) enhances the interest of an epic account.</p><br>
+            <p>The most well kown gods of greece mythology are Zeus, Hermes, Apollo,
+                Dionysus, Aphrodite, Poseidon, Hephaestus, Hades, Athena, Hera, Demeter, Artemis, 
+                Hestia, Eros, Persephone, Gaia, Helios, Uranus, Titans, Heracles & Pan</p>
+        </div>
+        <img src="https://cutewallpaper.org/21/artemis/Statue-of-Artemis-Artemis-and-stag-Her-bow-broken-somewhe-.jpg" alt="Greek Mythology Image" style="width: 100%; max-width: 260px; margin-left: 330px; margin-top: 10px; margin-bottom: 5px;">
+        <img src="https://cdn.britannica.com/35/33635-050-889BEF53/Demeter-Cnidus-sculpture-goddess-agriculture-Greek.jpg" alt="Greek Mythology Image" style="width: 100%; max-width: 259px; margin-left: 10px; margin-bottom: 5px;">       
+        <img src="https://www.greekmythology.com/images/mythology/dionysus_large_image_33.jpg" alt="Greek Mythology Image" style="width: 100%; max-width: 290px; margin-left: 10px; margin-bottom: 5px;"> 
+    </section>    
+    <!-----------------------------------evil------------------------------------->
+    <section class="evil" id="evil">
+        <div class="textx">
+            <h1 style="text-align: center; background-color: rgb(152, 152, 152);">Evils of Greek Mythology:</h1>
+            <p>Most Evil characters of greek mythology are Cronus, Ares, Eris, Enyo, Arachne, Medea, Pandora, Medusa, Thanatos, Ate, Apate
+                Greek mythology is not only vast but also entertaining. It is full of magic, murder and mystery. We all know the heroes of 
+                Greek mythology, but what about the villainous characters? We have compiled a list of Top villains of the Greek mythology.</p><br>
+        <img src="https://www.greekmythology.com/images/mythology/cyclopes_large_image_101.jpg" alt="Greek Mythology Image" style="width: 100%; max-width: 300px; margin-left: 320px; margin-top: 10px; margin-bottom: 5px;">
+        <img src="https://cdn.britannica.com/96/139796-050-FA4A32DF/Cronus-castle-Edzell-Scot.jpg" alt="Greek Mythology Image" style="width: 100%; max-width: 281px; margin-left: 10px; margin-bottom: 5px;">       
+        <img src="https://www.worldhistory.org/uploads/images/4440.jpg?v=1599385503" alt="Greek Mythology Image" style="width: 100%; max-width: 251px; margin-left: 10px; margin-bottom: 5px;"><br><br>
+            <p>It isn't like we can cover all topics in Greece mythology, It's a vast subject, and it's hard to define the characters in it. 
+                In Greek mythology, we can't conclude about characters because not every character is as good as it was, and not every character 
+                is as evil as it was. It all depended upon the situation and fate. Not as part of the subject but evils were created. It isn't 
+                like it was born evil but it was made evil from noble. </p><br>
+        </div>
+        <img src="https://teaandrosemary.com/wp-content/uploads/2022/01/tumblr_76ce7cd4d6ab169f9b93baf7f38ffda7_cad69882_2048.jpg" alt="Greek Mythology Image" style="width: 100%; max-width: 270px; margin-left: 330px; margin-top: 10px; margin-bottom: 5px;">
+        <img src="https://static.wikia.nocookie.net/lamitologiagriega/images/b/b1/T%C3%A1natos_Mors.png/revision/latest?cb=20160416204440&path-prefix=es" alt="Greek Mythology Image" style="width: 100%; max-width: 243px; margin-left: 10px; margin-bottom: 5px;">       
+        <img src="https://3.bp.blogspot.com/-TOTSOm7564U/VS7-t_HKfwI/AAAAAAAADY4/RAQApB5noEg/s1600/Medea2.jpg" alt="Greek Mythology Image" style="width: 100%; max-width: 293px; margin-left: 10px; margin-bottom: 5px;">
+    </section>
+    <!-------------------------------------creatures------------------------------------>
+    <section class="creatures" id="creatures">
+        <div class="textx">
+            <h1 style="text-align: center; background-color: rgb(152, 152, 152);">Creatures of Greek Mythology:</h1>
+            <p>Many Greek myths involve animal transformations, though there is no proof that theriolatry 
+                (animal worship) was ever practiced by the Greeks. Gods sometimes assumed the form of beasts 
+                in order to deceive goddesses or women. Zeus, for example, assumed the form of a bull when 
+                he carried off Europa, a Phoenician princess, and he appeared in the guise of a swan in order 
+                to attract Leda, wife of a king of Sparta. Poseidon took the shape of a stallion to beget the 
+                wonder horses Arion and Pegasus.</p><br>
+        
+        <img src="https://www.greekmythology.com/images/mythology/pegasus_large_image_114.jpg" alt="Greek Mythology Image" style="width: 100%; max-width: 450px; margin-left: 300px; margin-top: 10px; margin-bottom: 5px;">
+        <img src="https://www.expanded-universe.eu/wp-content/uploads/2016/06/Hercules4.jpg" alt="Greek Mythology Image" style="width: 100%; max-width: 428px; margin-left: 10px; margin-bottom: 5px;"><br><br>
+            <p>These myths do not suggest theriolatry. No worship is offered to the deity concerned. The animals 
+                serve other purposes in the narratives. Bulls were the most powerful animals known to the Greeks 
+                and may have been worshipped in the remote past. But, for the Greeks, in even the earliest sources 
+                there is no indication that Zeus or Poseidon were once bulls or horses or that Hera was ever “ox-eyed” 
+                other than metaphorically or that “gray-eyed” Athena was ever “owl-faced.”</p>
+        </div>
+    </section>
+    <!----------------------------------------planets--------------------------------------->
+    <section class="planets" id="planets">
+        <div class="textx">
+            <h1 style="text-align: center; background-color: rgb(152, 152, 152);">Planets of Greek Mythology:</h1>
+            <p>The ancient Greeks called them by their Greek god names, unsurprisingly: Jupiter was Zeus, Mercury was Hermes, 
+                and Venus was Aphrodite. The ancient Babylonians also named the planets after their deities: Jupiter was Marduk, 
+                Mercury was Nebo, and Venus was the goddess Ishtar.</p><br>
+            <p>The ancient Babylonians, Greeks, Persians, Romans and others thought of the 7 Classical Planets as gods and named 
+                their 7 days of the week after them. Astrologers retain this definition of the 7 Classical Planets today.</p>
+                <h2>The 7 planets are:</h2>
+                    <ul>Saturn -industrious, melancholic, and tranquil</ul>
+                    <ul>Jupiter -charming and hunting</ul>
+                    <ul>Mars -soldiering and warfare</ul>
+                    <ul>Sun -music and athleticism</ul>
+                    <ul>Moon -shy and tenderness</ul>
+                    <ul>Mercury -prudent, crafty, lovable, and commerce</ul>
+                    <ul>Venus -amorousness and passion.</ul>
+        </div>
+        <img src="https://kaiserscience.files.wordpress.com/2018/12/roman-gods-2.png" alt="Greek Mythology Image" style="width: 100%; max-width: 950px; margin-left: 300px; margin-top: 10px; margin-bottom: 5px;">
+    </section>
+    <!-------------------------------------------plants-------------------------------------->
+    <section class="plants" id="plants">
+        <div class="textx">
+            <h1 style="text-align: center; background-color: rgb(152, 152, 152);">Plants of Greek Mythology:</h1>
+            <p>PLANTS & FLOWERS OF GREEK MYTH: <br> The plants and flowers of ancient Greece were rich in mythology:<br>
+                ranging from the tale of Persephone The goddess of spring and the pomegranate seeds, to the flowery metamorphoses of 
+                Hyakinthos, the golden apples of the Hesperides, and the tree-morphing nymph Daphne.Have you ever 
+                wondered what some of the famous plants of myth looked like? All the plants are illustrated, just 
+                click on the thumbnails to view an image montage of each plant.
+                N.B. The identification of the plant species are from the Henry George Liddell Greek-English lexicon.</p>
+                <br>
+        </div>
+    </section>
+</form>
+    
+</body>
+</html>

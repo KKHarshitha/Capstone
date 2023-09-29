@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body{
+            background-color: #bebebe;
+            background-repeat: no-repeat;
+            height:100vh;
+        }
+        /* Style for the overall form */
+        form {
+            max-width: 400px;
+            margin: 150px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        /* Style for form input fields */
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 90%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            font-size: 14px;
+        }
+
+        /* Style for submit button */
+        input[type="submit"] {
+            background-color: rgb(199, 199, 199);
+            color: #1f1f1f;
+            margin-left:150px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #1e1e1e;
+            color: white;
+        }
+
+        /* Style for form labels */
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        /* Add some spacing between form elements */
+        br {
+            margin-top: 10px;
+        }  
+        form{
+            background-color: rgb(102, 102, 102);
+        }
+    </style>
+</head>
+<body>
+    <form action="/signinsubmit" method="post">
+        <label for="email">Email :</label>
+        <input type="email" name="email" id="email"><br>
+        
+        <label for="password">Password :</label>
+        <input type="password" name="pwd" id="password"><br>
+        
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

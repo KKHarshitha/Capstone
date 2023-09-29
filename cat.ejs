@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            list-style: none;
+            scroll-behavior: smooth;
+        }
+        body{
+            background: rgb(0, 0, 0);
+            font-family: fantasy;
+            /*background-image: url(https://w0.peakpx.com/wallpaper/192/353/HD-wallpaper-disillusioned-society-statue-sad-mood-aesthetics.jpg);*/
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        header{
+            position: fixed;
+            width: 100%;
+            top: 0;
+            right: 0;
+            z-index: 1000px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 35px 13% ;
+            padding-right: 3%;
+            border-bottom: 2px solid black;
+            border-top: 2px solid black;
+            transition: all .45s ease;
+            background-color: rgb(27, 34, 34);
+        }
+        .logo{
+            color: rgb(255, 255, 255);
+            font-size: 35px;
+            font-weight: 500;
+            letter-spacing: 1.5px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        .logo span{
+            color: rgb(121, 59, 53);
+        }
+        .hlist{
+            display: flex;
+            font-size: 35px;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        .hlist a{
+            color: rgb(255, 255, 255);
+            font-size: 17px;
+            font-weight: 500;
+            margin: 0 30px;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: all .45s ease;
+            box-shadow: 3px 3px 10px 5px #494444;
+        }
+        .hlist a:hover{
+            color: rgb(106, 101, 101);
+        }
+        .hlist li a:hover{
+            background: #fff;
+            color: black;
+        
+        }
+        .home{
+            color: #ffffff;
+            padding: 15% 15% 5% 15%;
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .home h1{
+            padding-left: 18%;
+            font-size: 45px;
+        }
+        .home h2{
+            padding-left: 30%;
+            font-size: 38px;
+        }
+        .home h3{
+            font-size: 27px;
+        }
+        .home p{
+            padding-bottom: 2%;
+        } 
+        .menu{
+            display: flex;
+            font-size: 35px;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            background-color: #393939;
+            padding-top: 2%;
+            padding-bottom: 2%;
+            box-shadow: 3px 3px 10px 5px #000;
+        }
+        .menu a{
+            color: rgb(255, 255, 255);
+            font-size: 17px;
+            font-weight: 500;
+            margin: 0 30px;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: all .3s ease;
+        }
+        .menu a:hover{
+            color: rgb(106, 101, 101);
+        }
+        .menu li a:hover{
+            background: #fff;
+            color: black;
+        }
+        /* css */
+        h1{
+            color: #000000;
+            font-size: 40px;
+        }
+        .textx h1{
+            text-align: center;
+            align-items: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        .textx h2{
+            color: #ffffff;
+            font-size: 25px;
+            padding-left: 300px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        .textx p{
+            color: #ffffff;
+            font-size: 17.5px;
+            padding-left: 300px;
+            padding-right: 300px;
+        }
+        .textx ul{
+            color: #ffffff;
+            font-size: 17px;
+            padding-left: 300px;
+            padding-right: 300px;
+        }
+    </style>
+</head>
+<body>
+    <form action="/cat.ejs" method="post">
+    <!-----------------------------logo----------------------------->
+    <nav>
+        <header>
+            <div class="logo">
+                <a class="logo"><span>MYTH</span>OLOGY</a>
+            </div>
+            <ul class="hlist">
+                <li><a class="one" href="home.ejs">HOME</a></li>
+                <li><a class="one" href="cat.ejs">CATEGORIES</a></li>
+                <li><a class="one" href="trees.ejs">GEN-Z TREES</a></li>
+                <li><a class="one" href="us.ejs">ABOUT US</a></li>
+            </ul>
+            <div class="bx-menu" id="menu-icon"> </div>
+        </header>
+    </nav>
+    <!---------------------------introduction--------------------------->
+    <div>
+        <section class="home" id="home">
+            <div class="home-text">
+                <div class="text">
+                    <h3>INTRODUCTION:</h1><br>
+                        <p>Since we are all human, our perspectives and opinions may differ.
+                            While some may not be interested in mythology, considering it mere 
+                            superstition, others may view it as something supernatural. For those 
+                            who believe in the supernatural aspect of mythology, we have some 
+                            material available below. And for those who may argue against this 
+                            viewpoint, we also have something for you. We hope you find it enjoyable!</p>
+                </div><br>
+                <div class="menu">
+                    <header1>
+                        <div class="menu-text">
+                            <li><a href="#natural" class="two">SUPERNATURALS</a></li>
+                            <li><a href="#stition" class="two">SUPERSTITIONS</a></li>
+                        </div>
+                    </header1>
+                </div>
+            </div>
+        </section>
+        <p style="color: #ffffff; font-size: 17.5px; padding-left: 250px; padding-right: 250px; font-size: 20px;">
+            The supernatural played a significant role in Greek mythology. In both cultures, 
+            the gods and goddesses were believed to possess extraordinary powers and abilities 
+            beyond those of mortal humans. They were often depicted as controlling natural 
+            phenomena, such as storms, earthquakes, and the seasons. The gods and goddesses 
+            were also thought to have a direct influence on human affairs, intervening in the 
+            lives of mortals through dreams, oracles, and other forms of divination.In addition 
+            to the gods and goddesses, other supernatural beings were also prominent in Greek mythology. 
+            These included monsters, such as the Minotaur and the Hydra, and supernatural creatures 
+            like the centaur and the harpy. Myths also featured heroes and demigods who possessed 
+            extraordinary abilities, often granted to them by the gods.Overall, the supernatural 
+            played a significant role in Greek and Roman mythology as a way of explaining the mysteries 
+            of the natural world and providing a framework for understanding the human experience.
+        </p>
+    </div>
+    <!-------------------------------natural--------------------------------->
+    <section class="natural" id="natural">
+        <div class="textx">
+            <h1 style="text-align: center; background-color: rgb(152, 152, 152);  ">Supernatural:</h1>
+            <h2>Introdution:</h2>
+            <h2>Supernaturals:</h2><br>
+                <p>In the mythologies of ancient Greece and Rome, supernatural beings held great importance. 
+                The gods and goddesses were believed to possess powers beyond those of ordinary humans and 
+                were often depicted as controlling natural events like storms, earthquakes, and seasonal 
+                changes. These divine beings were thought to directly impact human lives through dreams, 
+                oracles, and other forms of divination.</p><br>
+            
+                <p>Greek and Roman mythology featured a variety of supernatural beings besides gods and goddesses.
+                Monsters like the Minotaur and Hydra, as well as creatures like centaurs and harpies, played 
+                significant roles. Along with these, myths highlighted heroes and demigods with exceptional 
+                abilities, often gifted by the gods.</p><br>
+            
+                <p>Overall, the supernatural played a significant role in Greek mythology as a way of explaining 
+                the natural world's mysteries and providing a framework for understanding the human experience. 
+                Supernatural events were important in Greek mythology, as they explained natural phenomena and 
+                gave context to human experience</p><br>
+        </div>
+    </section>
+    <!-----------------------------------gods------------------------------------>
+    <section class="stition" id="stition">
+        <div class="textx">
+            <h1 style="text-align: center; background-color: rgb(152, 152, 152);">Superstition:</h1>
+            <h2>Introdution:</h2>
+            <p>Mythology is a sum of fables told by the ancient Greeks to explain the existence of the world, 
+                some natural phenomena or just for pleasure, to intrigue the imagination of people. Most of 
+                these Ancient Greek myths survive till our days because they have been included in the works 
+                of famous ancient writers and historians. They are, of course, not based on rationalism but 
+                on the unbelievable and the supernatural. Some of the ancient Greek myths are shocking, 
+                but all are bound to captivate you.</p>
+            <p style="font-weight: bold; font-size: 25px;">If your intrested <a href="https://www.ibiblio.org/ml/libri/b/BerensEM_MythsLegends_p.pdf">click here</a> for more information</p><br><br>
+        </div>
+    </section>
+</form>
+</body>
+</html>
